@@ -4,4 +4,7 @@
     <string name="content2">그래픽명함</string>
     <string name="content3">디자인쿠폰</string>
     <string name="image_url">http://localhost:8081/images/</string>
+    <string name="action_settings1">새 메모 작성하기</string>
+    <string name="action_settings2">메모 내용 편집</string>
+    <string name="action_settings3">메모 내용 삭제</string>
 </resources>
