@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">아날로그 엔진</string>
+    <string name="content1">감성명함</string>
+    <string name="content2">그래픽명함</string>
+    <string name="content3">디자인쿠폰</string>
+    <string name="image_url">http://localhost:8081/images/</string>
+</resources>
