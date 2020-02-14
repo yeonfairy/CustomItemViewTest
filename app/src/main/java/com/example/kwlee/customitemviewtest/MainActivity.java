@@ -2,11 +2,17 @@ package com.example.kwlee.customitemviewtest;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -23,26 +29,35 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     private MainBackPressCloseHandler mainBackPressCloseHandler;
 
+    // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+    // 3개의 Bottom 메뉴에 들어갈 Fragment들(Home, Search, Camera)
+//    private MainActivity menu1Fragment = new MainActivity();
+//   private MainActivity menu2Fragment = new MainActivity();
+    private AddPhotoActivity menu3Fragment = new AddPhotoActivity();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mainBackPressCloseHandler = new MainBackPressCloseHandler(this);
-
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        //첫 화면 지정
         TabHost tabHost1 = (TabHost) findViewById(R.id.tabHost1) ;
         tabHost1.setup() ;
 
         // 첫 번째 Tab. (탭 표시 텍스트:"TAB 1"), (페이지 뷰:"content1")
         TabHost.TabSpec ts1 = tabHost1.newTabSpec("Tab Spec 1") ;
         ts1.setContent(R.id.content1) ;
-        ts1.setIndicator("강아지") ;
+        ts1.setIndicator("메모리스트") ;
         tabHost1.addTab(ts1)  ;
 
         // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
         TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2") ;
         ts2.setContent(R.id.content2) ;
-        ts2.setIndicator("피자") ;
+        ts2.setIndicator("♥") ;
         tabHost1.addTab(ts2) ;
 
         // 세 번째 Tab. (탭 표시 텍스트:"TAB 3"), (페이지 뷰:"content3")
@@ -155,6 +170,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 101);
             }
         });
+        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                switch (item.getItemId()) {
+     /*               case R.id.action_home: {
+                        transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
+                        break;
+                    }
+                    case R.id.action_search: {
+                        transaction.replace(R.id.frame_layout, menu2Fragment).commitAllowingStateLoss();
+                        break;
+                    }
+  */                  case R.id.action_add_photo: {
+                        transaction.replace(R.id.frame_layout, menu3Fragment).commitAllowingStateLoss();
+                        break;
+                    }
+                }
+
+                return true;
+            }
+        });
     }
 
     @Override
@@ -194,12 +232,34 @@ public class MainActivity extends AppCompatActivity {
             alBuilder.setTitle("프로그램 종료");
             alBuilder.show(); // AlertDialog.Bulider로 만든 AlertDialog를 보여준다.
         }
-
+    //액션버튼 메뉴 액션바에 집어 넣기
     @Override
-    public boolean onCreateOptionsMenu(Menu menu2) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu2, menu2);
+        getMenuInflater().inflate(R.menu.bottom_navigation_main, menu);
         return true;
     }
+
+    //액션버튼을 클릭했을때의 동작
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        //or switch문을 이용하면 될듯 하다.
+        if (id == android.R.id.home) {
+            Intent homeIntent = new Intent(this, MainActivity.class);
+            startActivity(homeIntent);
+        }
+        if (id == R.id.action_search) {
+            Toast.makeText(this, "검색 클릭", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.action_add_photo) {
+            Toast.makeText(this, "카메라", Toast.LENGTH_SHORT).show();
+            Intent photoIntent = new Intent(this, AddPhotoActivity.class);
+            startActivity(photoIntent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
+}
 

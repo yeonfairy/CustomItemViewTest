@@ -1,11 +1,11 @@
 package com.example.kwlee.customitemviewtest;
 
 import android.content.Intent;
+
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,11 +38,6 @@ public class MenuActivity extends AppCompatActivity {
         Log.i("Receive Data : ",Receive);
         Log.i("Receive Data : ",Receive2);
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
+
 }
 
