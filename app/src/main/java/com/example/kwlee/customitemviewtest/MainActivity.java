@@ -69,36 +69,36 @@ public class MainActivity extends AppCompatActivity {
 
         // 데이터 원본 준비
         ArrayList<MyItem> data = new ArrayList<MyItem>();
-        data.add(new MyItem(R.drawable.sample_0, "Bella", "1살"));
+        data.add(new MyItem(R.drawable.blank_default, "Bella", "1살"));
         data.add(new MyItem(R.drawable.sample_1, "Charlie", "2살"));
         data.add(new MyItem(R.drawable.sample_2, "Daisy", "1.5살"));
-        data.add(new MyItem(R.drawable.sample_3, "Duke", "1살"));
-        data.add(new MyItem(R.drawable.sample_4, "Max", "2살"));
-        data.add(new MyItem(R.drawable.sample_5, "Happy", "4살"));
+        data.add(new MyItem(R.drawable.blank_default, "Duke", "1살"));
+        data.add(new MyItem(R.drawable.blank_default, "Max", "2살"));
+        data.add(new MyItem(R.drawable.blank_default, "Happy", "4살"));
         data.add(new MyItem(R.drawable.sample_6, "Luna", "3살"));
         data.add(new MyItem(R.drawable.sample_7, "Bob", "2살"));
         ArrayList<MyItem> data2 = new ArrayList<MyItem>();
         data2.add(new MyItem(R.drawable.sample_8, "피자_1", "10000원"));
         data2.add(new MyItem(R.drawable.sample_9, "피자_2", "20000원"));
-        data2.add(new MyItem(R.drawable.sample_10, "피자_3", "1.5000원"));
+        data2.add(new MyItem(R.drawable.blank_default2, "피자_3", "1.5000원"));
         data2.add(new MyItem(R.drawable.sample_11, "피자_4", "10000원"));
-        data2.add(new MyItem(R.drawable.sample_12, "피자_5", "20000원"));
-        data2.add(new MyItem(R.drawable.sample_13, "피자_6", "40000원"));
+        data2.add(new MyItem(R.drawable.blank_default2, "피자_5", "20000원"));
+        data2.add(new MyItem(R.drawable.blank_default2, "피자_6", "40000원"));
         data2.add(new MyItem(R.drawable.sample_14, "피자_7", "30000원"));
         data2.add(new MyItem(R.drawable.sample_15, "피자_8", "20000원"));
         data2.add(new MyItem(R.drawable.sample_16, "피자_9", "30000원"));
-        data2.add(new MyItem(R.drawable.sample_17, "피자_10", "20000원"));
+        data2.add(new MyItem(R.drawable.blank_default2, "피자_10", "20000원"));
         ArrayList<MyItem> data3 = new ArrayList<MyItem>();
         data3.add(new MyItem(R.drawable.sample_20, "과일_1", "10000원"));
         data3.add(new MyItem(R.drawable.sample_21, "과일_2", "20000원"));
         data3.add(new MyItem(R.drawable.sample_22, "과일_3", "1.5000원"));
-        data3.add(new MyItem(R.drawable.sample_23, "과일_4", "10000원"));
+        data3.add(new MyItem(R.drawable.blank_default3, "과일_4", "10000원"));
         data3.add(new MyItem(R.drawable.sample_24, "과일_5", "20000원"));
         data3.add(new MyItem(R.drawable.sample_25, "과일_6", "40000원"));
         data3.add(new MyItem(R.drawable.sample_26, "과일_7", "30000원"));
-        data3.add(new MyItem(R.drawable.sample_27, "과일_8", "20000원"));
+        data3.add(new MyItem(R.drawable.blank_default3, "과일_8", "20000원"));
         data3.add(new MyItem(R.drawable.sample_28, "과일_9", "30000원"));
-        data3.add(new MyItem(R.drawable.sample_29, "과일_10", "20000원"));
+        data3.add(new MyItem(R.drawable.blank_default3, "과일_10", "20000원"));
         data3.add(new MyItem(R.drawable.sample_30, "과일_11", "30000원"));
         data3.add(new MyItem(R.drawable.sample_31, "과일_11", "20000원"));
         // 어댑터 생성
