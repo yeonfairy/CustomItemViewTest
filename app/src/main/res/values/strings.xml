@@ -6,7 +6,7 @@
 
     <!-- Bottom Navigation View : main-->
     <string name="home">게시물</string>
-    <string name="search">검색</string>
+    <string name="search">앨범</string>
     <string name="gallery">카메라 롤</string>
 
     <!-- Bottom Navigation View : detail -->
