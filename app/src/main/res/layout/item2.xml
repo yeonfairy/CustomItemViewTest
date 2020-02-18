@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- Title Layout -->
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="1"
+        android:padding="@dimen/list_item_padding"
+        android:textSize="@dimen/list_item_text_size1"
+        tools:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    <!-- Content ImageView -->
+    <ImageView
+        android:id="@+id/iconItem"
+        android:layout_width="match_parent"
+        android:layout_height="367dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/icon_padding"
+        android:scaleType="fitXY"
+        android:src="@drawable/sample_0" />
+    <!-- favorite & comment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/detailviewitem_favorite_imageview"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_favorite_border" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textItem1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Name"
+        android:padding="@dimen/list_item_padding"
+        android:textSize="@dimen/list_item_text_size1"
+        tools:text="제목 내용" />
+
+    <TextView
+        android:id="@+id/textItem2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Age"
+        android:padding="@dimen/list_item_padding"
+        android:textSize="@dimen/list_item_text_size2"
+        tools:text="본문 내용"/>
+</LinearLayout>
