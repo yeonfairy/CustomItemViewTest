@@ -2,12 +2,17 @@ package com.example.kwlee.customitemviewtest;
 
 import android.content.Intent;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -15,7 +20,25 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item2);
-
+        //메뉴 추가
+        BottomNavigationView bottomNavigationView2 = findViewById(R.id.bottom_navigation_detail);
+        bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                //             FragmentTransaction transaction = fragmentManager.beginTransaction();
+                switch (item.getItemId()) {
+                    case R.id.action_update: {
+                        Toast.makeText(MenuActivity.this, "수정 selected", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.action_delete: {
+                        Toast.makeText(MenuActivity.this, "삭제 selected", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
         ActionBar actionBar = getSupportActionBar();  //제목줄 객체 얻어오기
 
         actionBar.setTitle("상세조회");  //액션바 제목설정

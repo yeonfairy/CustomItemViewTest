@@ -68,4 +68,15 @@
         android:padding="@dimen/list_item_padding"
         android:textSize="@dimen/list_item_text_size2"
         tools:text="본문 내용"/>
+
+    <!-- Bottom Navigation View -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorDivision"
+        app:itemIconTint="@color/colorNavIcon"
+        app:itemTextColor="@color/colorNavIcon"
+        app:menu="@menu/bottom_navigation_detail" />
 </LinearLayout>

@@ -4,12 +4,16 @@
     <string name="action_settings2">메모 내용 편집</string>
     <string name="action_settings3">메모 내용 삭제</string>
 
-    <!-- Bottom Navigation View -->
+    <!-- Bottom Navigation View : main-->
     <string name="home">home</string>
     <string name="search">Search</string>
     <string name="gallery">Gallery</string>
     <string name="favorite">Favorite</string>
     <string name="account">Account</string>
+
+    <!-- Bottom Navigation View : detail -->
+    <string name="update">수정</string>
+    <string name="delete">삭제</string>
 
     <!-- Add Photo -->
     <string name="upload_image">사진 올리기</string>

@@ -174,23 +174,24 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
+   //             FragmentTransaction transaction = fragmentManager.beginTransaction();
                 switch (item.getItemId()) {
-     /*               case R.id.action_home: {
-                        transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
+                    case R.id.action_home: {
+                        Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(homeIntent);
                         break;
                     }
                     case R.id.action_search: {
-                        transaction.replace(R.id.frame_layout, menu2Fragment).commitAllowingStateLoss();
-                        break;
+   //                     Intent photoIntent = new Intent(getApplicationContext(), AddPhotoActivity.class);
+   //                     startActivity(photoIntent);
                     }
-  */                  case R.id.action_add_photo: {
-                        transaction.replace(R.id.frame_layout, menu3Fragment).commitAllowingStateLoss();
+                    case R.id.action_add_photo: {
+                        Intent photoIntent = new Intent(getApplicationContext(), AddPhotoActivity.class);
+                        startActivity(photoIntent);
                         break;
                     }
                 }
-
-                return true;
+                return false;
             }
         });
     }
@@ -240,26 +241,5 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    //액션버튼을 클릭했을때의 동작
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        //or switch문을 이용하면 될듯 하다.
-        if (id == android.R.id.home) {
-            Intent homeIntent = new Intent(this, MainActivity.class);
-            startActivity(homeIntent);
-        }
-        if (id == R.id.action_search) {
-            Toast.makeText(this, "검색 클릭", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        if (id == R.id.action_add_photo) {
-            Toast.makeText(this, "카메라", Toast.LENGTH_SHORT).show();
-            Intent photoIntent = new Intent(this, AddPhotoActivity.class);
-            startActivity(photoIntent);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
 
