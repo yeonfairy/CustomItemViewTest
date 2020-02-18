@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -68,7 +69,13 @@
         android:padding="@dimen/list_item_padding"
         android:textSize="@dimen/list_item_text_size2"
         tools:text="본문 내용"/>
-
+    <LinearLayout
+        android:id="@+id/nav_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottom_navigation_detail"
+        android:background="@color/colorDivision"
+        android:orientation="horizontal" />
     <!-- Bottom Navigation View -->
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation_detail"

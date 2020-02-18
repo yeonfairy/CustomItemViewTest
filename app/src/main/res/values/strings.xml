@@ -5,11 +5,9 @@
     <string name="action_settings3">메모 내용 삭제</string>
 
     <!-- Bottom Navigation View : main-->
-    <string name="home">home</string>
-    <string name="search">Search</string>
-    <string name="gallery">Gallery</string>
-    <string name="favorite">Favorite</string>
-    <string name="account">Account</string>
+    <string name="home">게시물</string>
+    <string name="search">검색</string>
+    <string name="gallery">카메라 롤</string>
 
     <!-- Bottom Navigation View : detail -->
     <string name="update">수정</string>
