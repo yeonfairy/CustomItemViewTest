@@ -5,36 +5,51 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MenuActivity extends AppCompatActivity {
+import java.util.List;
 
+
+public class MenuActivity extends AppCompatActivity {
+    private List<MyItem> mItemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item2);
+
         //메뉴 추가
         BottomNavigationView bottomNavigationView2 = findViewById(R.id.bottom_navigation_detail);
         bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //             FragmentTransaction transaction = fragmentManager.beginTransaction();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this); //dialog 선언
+                View view = LayoutInflater.from(MenuActivity.this).inflate(R.layout.item2_edit, null, false);
+                builder.setView(view);
+
+                final EditText mWriteTitle = (EditText) view.findViewById(R.id.editTextItem1); //참조
+                final EditText mWriteContent = (EditText) view.findViewById(R.id.editTextItem2);
+
                 switch (item.getItemId()) {
-                    case R.id.action_update: {
+                    case R.id.action_update:
                         Toast.makeText(MenuActivity.this, "수정 selected", Toast.LENGTH_SHORT).show();
+                        Intent EditViewIntent = new Intent(getApplicationContext(), EditDetailView.class);
+                        startActivity(EditViewIntent);
                         break;
-                    }
-                    case R.id.action_delete: {
+
+                    case R.id.action_delete:
                         Toast.makeText(MenuActivity.this, "삭제 selected", Toast.LENGTH_SHORT).show();
                         break;
-                    }
                 }
                 return false;
             }
@@ -68,5 +83,6 @@ public class MenuActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.bottom_navigation_detail, menu);
         return true;
     }
+
 }
 

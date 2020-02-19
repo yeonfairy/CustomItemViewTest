@@ -5,9 +5,9 @@
     <string name="action_settings3">메모 내용 삭제</string>
 
     <!-- Bottom Navigation View : main-->
-    <string name="home">게시물</string>
-    <string name="search">앨범</string>
-    <string name="gallery">카메라 롤</string>
+    <string name="home">메인화면</string>
+    <string name="album">앨범</string>
+    <string name="gallery">게시물 생성</string>
 
     <!-- Bottom Navigation View : main-->
     <string name="library">라이브러리</string>

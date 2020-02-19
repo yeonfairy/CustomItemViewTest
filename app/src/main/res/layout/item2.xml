@@ -35,6 +35,7 @@
         android:padding="@dimen/icon_padding"
         android:scaleType="fitXY"
         android:src="@drawable/sample_0" />
+
     <!-- favorite & comment -->
     <LinearLayout
         android:layout_width="match_parent"

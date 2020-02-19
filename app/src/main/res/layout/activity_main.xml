@@ -104,19 +104,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
                     </LinearLayout>
+                    <!-- 두 번째 페이지. content2 좋아요 페이지 : 시간 여유가 있을 때 만들려고 만든 페이지-->
+                    <!--
+                                        <LinearLayout
+                                            android:id="@+id/content2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/content2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ListView
-                            android:id="@+id/listView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-                    <!-- 세 번째 페이지. content3 -->
+                                            <ListView
+                                                android:id="@+id/listView2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent" />
+                                        </LinearLayout>
+                                        -->
+                    <!-- 세 번째 페이지. content3 --> 앨범 페이지 : 시간 여유가 있을 때 만들려고 만든 페이지
+                    <!--
                     <LinearLayout
                         android:id="@+id/content3"
                         android:layout_width="match_parent"
@@ -128,6 +131,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
                     </LinearLayout>
+                    -->
                 </FrameLayout>
             </LinearLayout>
         </TabHost>

@@ -69,6 +69,4 @@ public class MyAdapter extends BaseAdapter {
 
         return convertView;
     }
-    // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
-
 }

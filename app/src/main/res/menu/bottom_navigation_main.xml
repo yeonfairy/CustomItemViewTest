@@ -6,11 +6,6 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
     <item
-        android:id="@+id/action_search"
-        android:enabled="true"
-        android:icon="@drawable/album"
-        android:title="@string/search" />
-    <item
         android:id="@+id/action_add_photo"
         android:enabled="true"
         android:icon="@drawable/ic_add_a_photo"

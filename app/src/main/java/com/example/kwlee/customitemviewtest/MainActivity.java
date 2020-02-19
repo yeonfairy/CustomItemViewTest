@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    // 3개의 Bottom 메뉴에 들어갈 Fragment들(Home, Search, Camera)
+
 //    private MainActivity menu1Fragment = new MainActivity();
 //   private MainActivity menu2Fragment = new MainActivity();
     private AddPhotoActivity menu3Fragment = new AddPhotoActivity();
@@ -55,16 +55,16 @@ public class MainActivity extends AppCompatActivity {
         tabHost1.addTab(ts1)  ;
 
         // 두 번째 Tab. (탭 표시 텍스트:"TAB 2"), (페이지 뷰:"content2")
-        TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2") ;
-        ts2.setContent(R.id.content2) ;
-        ts2.setIndicator("♥") ;
-        tabHost1.addTab(ts2) ;
+//        TabHost.TabSpec ts2 = tabHost1.newTabSpec("Tab Spec 2") ;
+//        ts2.setContent(R.id.content2) ;
+//        ts2.setIndicator("♥") ;
+//        tabHost1.addTab(ts2) ;
 
         // 세 번째 Tab. (탭 표시 텍스트:"TAB 3"), (페이지 뷰:"content3")
-        TabHost.TabSpec ts3 = tabHost1.newTabSpec("Tab Spec 3") ;
-        ts3.setContent(R.id.content3) ;
-        ts3.setIndicator("과일") ;
-        tabHost1.addTab(ts3) ;
+ //       TabHost.TabSpec ts3 = tabHost1.newTabSpec("Tab Spec 3") ;
+//        ts3.setContent(R.id.content3) ;
+ //       ts3.setIndicator("앨범") ;
+ //       tabHost1.addTab(ts3) ;
 
 
         // 데이터 원본 준비
@@ -77,6 +77,28 @@ public class MainActivity extends AppCompatActivity {
         data.add(new MyItem(R.drawable.blank_default, "Happy", "4살"));
         data.add(new MyItem(R.drawable.sample_6, "Luna", "3살"));
         data.add(new MyItem(R.drawable.sample_7, "Bob", "2살"));
+        data.add(new MyItem(R.drawable.sample_8, "피자_1", "10000원"));
+        data.add(new MyItem(R.drawable.sample_9, "피자_2", "20000원"));
+        data.add(new MyItem(R.drawable.blank_default2, "피자_3", "1.5000원"));
+        data.add(new MyItem(R.drawable.sample_11, "피자_4", "10000원"));
+        data.add(new MyItem(R.drawable.blank_default2, "피자_5", "20000원"));
+        data.add(new MyItem(R.drawable.blank_default2, "피자_6", "40000원"));
+        data.add(new MyItem(R.drawable.sample_14, "피자_7", "30000원"));
+        data.add(new MyItem(R.drawable.sample_15, "피자_8", "20000원"));
+        data.add(new MyItem(R.drawable.sample_16, "피자_9", "30000원"));
+        data.add(new MyItem(R.drawable.blank_default2, "피자_10", "20000원"));
+        data.add(new MyItem(R.drawable.sample_20, "과일_1", "10000원"));
+        data.add(new MyItem(R.drawable.sample_21, "과일_2", "20000원"));
+        data.add(new MyItem(R.drawable.sample_22, "과일_3", "1.5000원"));
+        data.add(new MyItem(R.drawable.blank_default3, "과일_4", "10000원"));
+        data.add(new MyItem(R.drawable.sample_24, "과일_5", "20000원"));
+        data.add(new MyItem(R.drawable.sample_25, "과일_6", "40000원"));
+        data.add(new MyItem(R.drawable.sample_26, "과일_7", "30000원"));
+        data.add(new MyItem(R.drawable.blank_default3, "과일_8", "20000원"));
+        data.add(new MyItem(R.drawable.sample_28, "과일_9", "30000원"));
+        data.add(new MyItem(R.drawable.blank_default3, "과일_10", "20000원"));
+        data.add(new MyItem(R.drawable.sample_30, "과일_11", "30000원"));
+        data.add(new MyItem(R.drawable.sample_31, "과일_11", "20000원"));
         ArrayList<MyItem> data2 = new ArrayList<MyItem>();
         data2.add(new MyItem(R.drawable.sample_8, "피자_1", "10000원"));
         data2.add(new MyItem(R.drawable.sample_9, "피자_2", "20000원"));
@@ -107,11 +129,11 @@ public class MainActivity extends AppCompatActivity {
         adapter3 = new MyAdapter(this, R.layout.item, data3);
         // 어댑터 연결
         ListView listView = (ListView)findViewById(R.id.listView1);
-        ListView listView2 = (ListView)findViewById(R.id.listView2);
-        ListView listView3 = (ListView)findViewById(R.id.listView3);
+//        ListView listView2 = (ListView)findViewById(R.id.listView2);
+//        ListView listView3 = (ListView)findViewById(R.id.listView3);
         listView.setAdapter(adapter);
-        listView2.setAdapter(adapter2);
-        listView3.setAdapter(adapter3);
+//        listView2.setAdapter(adapter2);
+//        listView3.setAdapter(adapter3);
 
         // 항목 선택 이벤트 처리
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -133,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // 항목 선택 이벤트 처리
+        /*
         listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View vClicked,
                                     int position, long id) {
@@ -140,10 +163,10 @@ public class MainActivity extends AppCompatActivity {
                 String name = ((MyItem)adapter2.getItem(position)).nName;
                 int img = ((MyItem)adapter2.getItem(position)).mIcon;
                 String age = ((MyItem)adapter2.getItem(position)).nAge;
-                /*imageView를 byteArray로 변환*/
+     */           /*imageView를 byteArray로 변환*/
 
                 //toast로 알림창 보이기
-                Toast.makeText(MainActivity.this, name + " selected", Toast.LENGTH_SHORT).show();
+      /*          Toast.makeText(MainActivity.this, name + " selected", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
@@ -151,18 +174,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 101);
             }
         });
+*/
         // 항목 선택 이벤트 처리
-        listView3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    /*    listView3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View vClicked,
                                     int position, long id) {
                 //   String name = (String) ((TextView)vClicked.findViewById(R.id.textItem1)).getText();
                 String name = ((MyItem)adapter3.getItem(position)).nName;
                 int img = ((MyItem)adapter3.getItem(position)).mIcon;
                 String age = ((MyItem)adapter3.getItem(position)).nAge;
-                /*imageView를 byteArray로 변환*/
+     */           /*imageView를 byteArray로 변환*/
 
                 //toast로 알림창 보이기
-                Toast.makeText(MainActivity.this, name + " selected", Toast.LENGTH_SHORT).show();
+      /*          Toast.makeText(MainActivity.this, name + " selected", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
@@ -170,26 +194,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 101);
             }
         });
-        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
+    */    // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
    //             FragmentTransaction transaction = fragmentManager.beginTransaction();
                 switch (item.getItemId()) {
-                    case R.id.action_home: {
+                    case R.id.action_home:
                         Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(homeIntent);
                         break;
-                    }
-                    case R.id.action_search: {
-   //                     Intent photoIntent = new Intent(getApplicationContext(), AddPhotoActivity.class);
-   //                     startActivity(photoIntent);
-                    }
-                    case R.id.action_add_photo: {
+                    case R.id.action_add_photo:
                         Intent photoIntent = new Intent(getApplicationContext(), AddPhotoActivity.class);
                         startActivity(photoIntent);
                         break;
-                    }
                 }
                 return false;
             }

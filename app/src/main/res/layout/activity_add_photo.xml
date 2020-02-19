@@ -14,10 +14,6 @@
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
-    <!-- Toolbar -->
-
-    <!-- Contents -->
-
     <ImageView
         android:id="@+id/addphoto_image2"
         android:layout_width="100dp"
@@ -66,6 +62,69 @@
         android:text="@string/upload_image"
         android:theme="@style/ButtonStyle"
         android:onClick="showPopup"/>
+    <!--사진첩, 라이브러리, URL-->
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_below="@id/addphoto_btn_upload"
+        android:padding="@dimen/icon_padding" />
+
+    <ImageView
+        android:id="@+id/photo2"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_below="@id/addphoto_btn_upload"
+        android:layout_toRightOf="@id/photo"
+        android:padding="@dimen/icon_padding" />
+
+    <ImageView
+        android:id="@+id/photo3"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_toRightOf="@id/photo2"
+        android:layout_below="@id/addphoto_btn_upload"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo4"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_below="@id/photo"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo5"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_toRightOf="@id/photo4"
+        android:layout_below="@id/photo2"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo6"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_toRightOf="@id/photo5"
+        android:layout_below="@id/photo3"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo7"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_below="@id/photo4"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo8"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_toRightOf="@id/photo7"
+        android:layout_below="@id/photo4"
+        android:padding="@dimen/icon_padding" />
+    <ImageView
+        android:id="@+id/photo9"
+        android:layout_width="134dp"
+        android:layout_height="159dp"
+        android:layout_toRightOf="@id/photo8"
+        android:layout_below="@id/photo5"
+        android:padding="@dimen/icon_padding" />
     <!-- Bottom Navigation View -->
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
