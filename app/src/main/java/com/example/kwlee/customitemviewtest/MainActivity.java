@@ -200,11 +200,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
    //             FragmentTransaction transaction = fragmentManager.beginTransaction();
                 switch (item.getItemId()) {
-                    case R.id.action_home:
+                    case R.id.action_list:
                         Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(homeIntent);
                         break;
-                    case R.id.action_add_photo:
+                    case R.id.action_camera:
                         Intent photoIntent = new Intent(getApplicationContext(), AddPhotoActivity.class);
                         startActivity(photoIntent);
                         break;

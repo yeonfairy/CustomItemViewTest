@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_home"
+        android:id="@+id/action_list"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_file_list_white"
         android:title="@string/home" />
     <item
-        android:id="@+id/action_add_photo"
+        android:id="@+id/action_camera"
         android:enabled="true"
-        android:icon="@drawable/ic_add_a_photo"
-        android:title="@string/gallery" />
+        android:icon="@drawable/ic_camera_alt_white"
+        android:title="@string/camera" />
 </menu>
